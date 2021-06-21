@@ -1,0 +1,27 @@
+import cervezas.*
+import carpas.*
+import personas.*
+
+
+describe "Oktubre Fest" {
+
+	const cervezaRoja = new CervezaRoja(gramosDeLupulo = 1, paisDeOrigen = "Alemania")
+	const cervezaNegra = new CervezaNegra(gramosDeLupulo = 2, paisDeOrigen = "Belgica")
+	
+	const jarraCervezaRoja = new Jarras(litros = 0.5, marca = "marcaRoja")
+	const jarraDeCervezaNegra = new Jarras(litros = 1, marca = "marcaRoja")
+	
+	const aleman = new Alemanes(peso = 70, escuchaMusicaTradicional = true, nivelDeAguante = 1)
+	const belga = new Belgas(peso = 100, escuchaMusicaTradicional = false, nivelDeAguante = 1)
+	const checo = new Checos(peso = 110, escuchaMusicaTradicional = false, nivelDeAguante = 1)
+	
+	const carpaDeCervezaRoja = new Carpas(limitePersonas = 3, tieneBanda = true, marca = "marcaRoja")
+	const carpaDeCervezaNegra = new Carpas(limitePersonas = 2, tieneBanda = false, marca = "marcaNegra")
+
+
+	test "Algunas pruebas" {
+	 assert.equals(2.5, cervezaRoja.graduacion())
+	 assert.equals(3, cervezaNegra.graduacion())
+	}
+	
+}
